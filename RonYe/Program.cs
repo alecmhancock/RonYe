@@ -14,34 +14,33 @@ Console.WriteLine();
 
 for (int i = 0; i < 5; i++)
 {
+    Console.WriteLine($"Kanye: {quote.Kanye()}");
+
+    Console.WriteLine($"Ron Swanson: {quote.RonSwanson()}");
+
+    Console.WriteLine();
+
+    Console.WriteLine($"Round {i + 1}: Who won this round, Kanye or Ron Swanson?");
     
     bool again = true;
     while (again)
     {
-        Console.WriteLine($"Kanye: {quote.Kanye()}");
-
-        Console.WriteLine($"Ron Swanson: {quote.RonSwanson()}");
-
-        Console.WriteLine();
-
-        Console.WriteLine($"Round {i + 1}: Who won this round, Kanye or Ron Swanson?");
         var userInput = Console.ReadLine().ToLower();
-        again = false;
-
         switch (userInput.ToLower())
         {
-            case "ron swanson": ronScore++;
+            case "ron swanson": ronScore++; again = false;
                 break;
-            case "ron": ronScore++;
+            case "ron": ronScore++; again = false;
                 break;
-            case "kanye": yeScore++;
+            case "kanye": yeScore++; again = false;
                 break;
-            case "ye": yeScore++;
+            case "ye": yeScore++; again = false;
                 break;
             default:
                 again = true;
                 break;
         }
+        
     }
     
 }
