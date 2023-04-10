@@ -14,17 +14,18 @@ Console.WriteLine();
 
 for (int i = 0; i < 5; i++)
 {
-    Console.WriteLine($"Kanye: {quote.Kanye()}");
-
-    Console.WriteLine($"Ron Swanson: {quote.RonSwanson()}");
-
-    Console.WriteLine();
-
-    Console.WriteLine($"Round {i+1}: Who won this round, Kanye or Ron Swanson?");
-    var userInput = Console.ReadLine().ToLower();
+    
     bool again = true;
     while (again)
     {
+        Console.WriteLine($"Kanye: {quote.Kanye()}");
+
+        Console.WriteLine($"Ron Swanson: {quote.RonSwanson()}");
+
+        Console.WriteLine();
+
+        Console.WriteLine($"Round {i + 1}: Who won this round, Kanye or Ron Swanson?");
+        var userInput = Console.ReadLine().ToLower();
         again = false;
 
         switch (userInput.ToLower())
@@ -61,5 +62,5 @@ else if (yeScore > ronScore)
 
 else
 {
-    Console.WriteLine("Well this is a logic bug. Glad you were able to find this.");
+    Console.WriteLine("Well this is a logic bug. How's your day going? Getting enough sleep?.");
 }
